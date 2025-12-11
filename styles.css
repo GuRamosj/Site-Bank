@@ -1,0 +1,255 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  color: #2e2b29;
+  background-color: #eeeeee; /* FUNDO 2: cinza suave */
+}
+
+/* HEADER */
+header {
+  background-color: #2e2b29;
+  padding: 0;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 60px;
+}
+
+.logo {
+  height: 150px;      /* aumenta a presença no header */
+  width: auto;
+  object-fit: contain;
+  padding: 5px 0;
+  image-rendering: auto; /* mantém qualidade */
+}
+
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+nav a {
+  color: #ffffff;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: #ffd900;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  background-image: url("assets/telhado.png");
+  background-size: cover;
+  background-position: center;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+}
+
+.hero h2 {
+  font-size: 2.4rem;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+}
+
+.btn {
+  background-color: #ffd700;
+  color: #2e2b29;
+  padding: 12px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #f0c800;
+}
+
+/* SEÇÕES */
+.servicos,
+.sobre,
+.contato {
+  width: 90%;
+  max-width: 1100px;
+  margin: 80px auto;
+  text-align: center;
+  padding: 40px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+}
+
+.servicos h2,
+.sobre h2,
+.contato h2 {
+  margin-bottom: 30px;
+  color: #2e2b29;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.card {
+  background: #f4f4f4;
+  border-radius: 10px;
+  padding: 20px;
+  width: 320px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+
+/* SOBRE */
+.sobre-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  align-items: center;
+}
+
+.sobre p {
+  flex: 1;
+  min-width: 280px;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.sobre img {
+  width: 250px;
+  border-radius: 12px;
+}
+
+/* FORM */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+/* FOOTER */
+footer {
+  background-color: #2e2b29;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+.social {
+  margin-top: 10px;
+}
+
+.social a {
+  color: #ffd700;
+  text-decoration: none;
+  margin: 0 8px;
+}
+
+.social a:hover {
+  text-decoration: underline;
+}
+
+/* WHATSAPP FLOAT */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.whatsapp-icon {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background: #ffffff;
+  padding: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease;
+}
+
+.whatsapp-icon:hover {
+  transform: scale(1.12);
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+
+  .header-inner {
+    padding: 20px;
+  }
+
+  .logo {
+    height: 85px;
+  }
+
+  nav a {
+    margin-left: 12px;
+  }
+
+  .hero h2 {
+    font-size: 1.6rem;
+  }
+
+  .hero {
+    height: 60vh;
+  }
+
+  .cards {
+    flex-direction: column;
+  }
+}
